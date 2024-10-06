@@ -28,7 +28,7 @@ namespace API_NBA.Controllers
             return await _context.Jugador.ToListAsync();
         }
 
-        // GET: api/Jugadores/5
+        // GET: api/Jugador/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Jugador>> GetJugador(int id)
         {
@@ -42,9 +42,9 @@ namespace API_NBA.Controllers
             return jugador;
         }
 
-        // POST: api/Jugadores
+        // POST: api/Jugador
         [HttpPost]
-        public async Task<ActionResult<Jugador>> PostProductos(Jugador jugador)
+        public async Task<ActionResult<Jugador>> PostJugador(Jugador jugador)
         {
             if (!JugadorExists(jugador.JugadorId))
             {
@@ -59,7 +59,7 @@ namespace API_NBA.Controllers
             return Ok(jugador);
         }
 
-        // DELETE: api/Jugadores/5
+        // DELETE: api/Jugador/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteJugador(int id)
         {
